@@ -1,27 +1,21 @@
 #!/usr/bin/env python3
 
 class Contact:
-
     def __init__(self):
         self.book = []
         self.names = []
         self.numbers = []
 
     def create(self, name, number, email):
-
         self.book.append([name, number, email])
         self.names.append(name)
         self.numbers.append(number)
         print(name, 'Contact created successfully!')
 
-    def update(self, name=False, number=False):
-
-        # -------------------------------- Update Using Names ----------------------#
+    def update(self, name=False, number=False): #update using names
         if name:
             if name in self.names:
-
                 inames = [i for i, x in enumerate(self.names) if x == name]
-
                 print('No.of contacts found: ', len(inames), inames)
                 c = 1
                 for iname in inames:
